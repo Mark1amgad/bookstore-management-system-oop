@@ -2,75 +2,47 @@
 {
     partial class Form1
     {
-        /// <summary>
-        ///  Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
+        // Only keep the main structural panels
+        private System.Windows.Forms.Panel mainContainer;
+        private System.Windows.Forms.Panel detailsPanel;
+        private System.Windows.Forms.Label lblHeader;
+        private System.Windows.Forms.DataGridView dgvClients;
+        // Inputs
+        private System.Windows.Forms.TextBox txtID, txtName, txtPhone, txtEmail;
+        private System.Windows.Forms.ComboBox cmbMembership, cmbGenre;
+        private System.Windows.Forms.Button btnSave, btnLoad, btnDelete;
 
-        /// <summary>
-        ///  Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
+            if (disposing && (components != null)) components.Dispose();
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            panel1 = new Panel();
-            SuspendLayout();
-            // 
-            // button1
-            // 
-            button1.Location = new Point(256, 208);
-            button1.Name = "button1";
-            button1.Size = new Size(112, 34);
-            button1.TabIndex = 0;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
-            // panel1
-            // 
-            panel1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            panel1.BackColor = Color.Transparent;
-            panel1.Location = new Point(30, 97);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(288, 281);
-            panel1.TabIndex = 1;
-            panel1.Paint += panel1_Paint;
-            // 
-            // Form1
-            // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = book_store.Resources.Bldg_Duke_Humfreys_BOD_JC_2019_0;
-            BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(894, 450);
-            Controls.Add(button1);
-            Controls.Add(panel1);
-            Name = "Form1";
-            Text = "Form1";
-            TransparencyKey = Color.FromArgb(255, 128, 255);
-            Load += Form1_Load;
-            ResumeLayout(false);
+            this.mainContainer = new System.Windows.Forms.Panel();
+            this.detailsPanel = new System.Windows.Forms.Panel();
+            this.lblHeader = new System.Windows.Forms.Label();
+            this.dgvClients = new System.Windows.Forms.DataGridView();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtPhone = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.cmbMembership = new System.Windows.Forms.ComboBox();
+            this.cmbGenre = new System.Windows.Forms.ComboBox();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnLoad = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+
+            // Set the exact size here and nowhere else
+            this.ClientSize = new System.Drawing.Size(1100, 700);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "";
+            this.ResumeLayout(false);
         }
-
-        #endregion
-
-        private Button button1;
-        private Panel panel1;
     }
 }

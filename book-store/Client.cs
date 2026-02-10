@@ -5,12 +5,11 @@
         public ENMembershipType EMembershipType { get; set; }
         public ENGenre FavBook { get; set; }
 
-        public override double ApplyDiscount(double price)
+        public override decimal ApplyDiscount(decimal price, ENMembershipType member)
         {
-            // Logic based on your diagrams
-            return EMembershipType == ENMembershipType.Student ? price * 0.8 : price;
+            if (member == ENMembershipType.Student) return price * 0.8m;
+            if (member == ENMembershipType.Senior) return price * 0.9m;
+            return price;
         }
-
-        public static string[] MEM() => new string[] { "Regular", "Student", "Senior" };
     }
 }

@@ -1,16 +1,14 @@
 ﻿namespace book_store
 {
-    public class Person : IPersonActions
+    public abstract class Person : IPersonActions
     {
-        public bool MarkForDelete = false;
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Email { get; set; }
-        public string Phone { get; set; }
+        public bool MarkForDelete { get; set; } = false;
+        public string Id { get; set; } = string.Empty;
+        public string Name { get; set; } = string.Empty;
+        public string Email { get; set; } = string.Empty;
+        public string Phone { get; set; } = string.Empty;
 
-        public virtual decimal ApplyDiscount(decimal price, ENMembershipType meber)
-        {
-            return price;
-        }
+        // Ensure parameters match your interface (decimal vs double)
+        public abstract decimal ApplyDiscount(decimal price, ENMembershipType member);
     }
 }
